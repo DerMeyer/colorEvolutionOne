@@ -22,7 +22,7 @@ btn1.addEventListener('click', function(e) {
     }
     grid.innerHTML = '';
     clearTimeout(timeoutID);
-    builtEvolution(5);
+    buildEvolution(5);
 });
 
 btn2.addEventListener('click', function() {
@@ -37,7 +37,7 @@ btn2.addEventListener('click', function() {
     }
     grid.innerHTML = '';
     clearTimeout(timeoutID);
-    builtEvolution(10);
+    buildEvolution(10);
 });
 
 btn3.addEventListener('click', function() {
@@ -52,7 +52,7 @@ btn3.addEventListener('click', function() {
     }
     grid.innerHTML = '';
     clearTimeout(timeoutID);
-    builtEvolution(42);
+    buildEvolution(42);
 });
 
 btn4.addEventListener('click', function(e) {
@@ -91,10 +91,10 @@ btn6.addEventListener('click', function(e) {
     } else {
         btn4.classList.remove('active');
     }
-    cycle = 5;
+    cycle = 1;
 });
 
-function builtEvolution(rows) {
+function buildEvolution(rows) {
 
     var areas = rows * rows;
     var grid = document.getElementById('grid');
@@ -208,4 +208,4 @@ function builtEvolution(rows) {
     }
 }
 
-builtEvolution(5);
+buildEvolution(5);
