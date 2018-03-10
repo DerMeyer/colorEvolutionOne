@@ -1,5 +1,6 @@
 // event handlers
 
+var cycle = 1500;
 var timeoutID;
 
 var btn1 = document.getElementById('btn1');
@@ -34,8 +35,9 @@ btn2.addEventListener('click', function() {
     } else {
         btn3.classList.remove('active');
     }
+    grid.innerHTML = '';
     clearTimeout(timeoutID);
-    builtEvolution(5);
+    builtEvolution(10);
 });
 
 btn3.addEventListener('click', function() {
@@ -48,13 +50,52 @@ btn3.addEventListener('click', function() {
     } else {
         btn1.classList.remove('active');
     }
+    grid.innerHTML = '';
     clearTimeout(timeoutID);
-    builtEvolution(5);
+    builtEvolution(42);
+});
+
+btn4.addEventListener('click', function(e) {
+    if (btn4.classList.contains('active')) {
+        return;
+    }
+    btn4.classList.add('active');
+    if (btn5.classList.contains('active')) {
+        btn5.classList.remove('active');
+    } else {
+        btn6.classList.remove('active');
+    }
+    cycle = 1500;
+});
+
+btn5.addEventListener('click', function(e) {
+    if (btn5.classList.contains('active')) {
+        return;
+    }
+    btn5.classList.add('active');
+    if (btn6.classList.contains('active')) {
+        btn6.classList.remove('active');
+    } else {
+        btn4.classList.remove('active');
+    }
+    cycle = 300;
+});
+
+btn6.addEventListener('click', function(e) {
+    if (btn6.classList.contains('active')) {
+        return;
+    }
+    btn6.classList.add('active');
+    if (btn5.classList.contains('active')) {
+        btn5.classList.remove('active');
+    } else {
+        btn4.classList.remove('active');
+    }
+    cycle = 5;
 });
 
 function builtEvolution(rows) {
 
-    var cycle = 1500;
     var areas = rows * rows;
     var grid = document.getElementById('grid');
     grid.style.gridTemplate = `repeat(${rows}, 1fr) / repeat(${rows}, 1fr)`;

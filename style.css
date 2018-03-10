@@ -55,13 +55,13 @@ h1 {
     transition: all .2s;
 }
 
-/* .btn:hover {
-    border: 3px solid rgb(8, 46, 10);
-} */
-
 .btn:hover {
     color: white;
     background-color: rgb(8, 46, 10);
+}
+
+.active {
+    border: 3px solid rgb(8, 46, 10);
 }
 
 
