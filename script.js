@@ -1,17 +1,20 @@
 // construction
 
-var rows = 5;
+var rows = 10;
+
+var cycle = 800;
+var timeoutID;
+
 var areas = rows * rows;
 
 var grid = document.getElementById('grid');
 grid.style.gridTemplate = `repeat(${rows}, 1fr) / repeat(${rows}, 1fr)`;
 
 var field;
-
 for (var a = 0; a < areas; a++) {
     field = document.createElement('div');
     field.classList.add('sqr');
-    field.setAttribute('id', + a); // adding indexes
+    field.setAttribute('id', + a);
     grid.appendChild(field);
 }
 
@@ -56,9 +59,6 @@ function indexPrey(n) {
     }
     return + arr[random];
 }
-
-var cycle = 1000;
-var timeoutID;
 
 function attack() {
     var predator = document.getElementById(index());
