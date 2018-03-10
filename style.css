@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+}
+
+#grid {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 90vh;
+    width: 90vh;
+    border: 1px solid rgb(8, 46, 10);
+    box-shadow: 1vh 1vh 1vh gray;
+    background-color: whitesmoke;
+}
+
+.sqr {
+    transition: transform .1s;
+}
+
+/* .slow {
+    transition: transform .5s ease-in-out .5s;
+} */
