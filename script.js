@@ -52,7 +52,7 @@ btn3.addEventListener('click', function() {
     }
     grid.innerHTML = '';
     clearTimeout(timeoutID);
-    buildEvolution(42);
+    buildEvolution(32);
 });
 
 btn4.addEventListener('click', function(e) {
@@ -78,7 +78,7 @@ btn5.addEventListener('click', function(e) {
     } else {
         btn4.classList.remove('active');
     }
-    cycle = 300;
+    cycle = 250;
 });
 
 btn6.addEventListener('click', function(e) {
